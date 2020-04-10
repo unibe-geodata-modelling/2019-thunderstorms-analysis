@@ -19,21 +19,27 @@ This coding project is conducted in the framework of the seminar 'Geodata Analys
 ## About the Analysis Tools
 For reaching the prediscribed aim of this project, the analysis tools consists of five different tools for investigating the state of the atmosphere: Horizontal maps, soundings, vertical cross-section, maps of trajectories and temporal evolution along trajectories. Based on these tools, figures are created, which serve as basis for analysis of the atmospheric conditions.
 
-The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the five analysis tools, a notebook document was generated. In the following section the workflow of the tools is described.
+The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the five analysis tools, a notebook document was generated, but also a python file is provided. In the following section the workflow of the analysis tools is described.
 
 ## What the Analysis Tools Do
 For the analysis tools is data used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which input data is also from the WRF model. The WRF data is in netCDF and the Lagranto output data in ASCII file format. 
+
+In the following subsections, the codes of the analysis tools are presented and information regarding how to use the codes is provided. For background information of the scientific methods, see the file xy.
 
 ### Horizontal Maps
 This analysis tool produces horizontal (2D) maps of different variables. Supported variables for plotting procedure are: updraft, reflectivity, helicity, pw, cape, cin, ctt, temperature_surface, wind_shear, rh, omega, pvo, avo, theta_e, water_vapor, uv_wind, updraft_reflectivity and divergence. Besides the selection of the desired variable_name for the plotting function 'horizontal_map', there are more input parameters to be defined: date, start_hour, end_hour, pressure_level=False, subset=False, initiation=False, save=False, gif=False. The first five parameters (variable_name included) need a specific input value (e.g. variable_name="divergence", date="2018-05-30", start_hour=16, end_hour=17, pressure_level=850), where the remaining paramteres need Boolean values (True or False). Further, some more variables need to be defined before using the plotting function (e.g. data_directory, initiation_location or variables depending on the chosen variable_name, see first section of function). Afterwards, the horizontal_map plotting function is ready to usage and generates figures according to the chosen input parameters. For some examples of different types, see Results section.
 
 ### Soundings
+The sounding is an analysis tool for investigating the vertical structure of the atmosphere for a selected location and date. At this point in space and time, the analysis tool generates a skew T-log p diagram. First, the required variables (e.g. pressure or temperature) need to be computed (by wrf-python function getvar()) and then added back to the WRF dataset. Afterwards, the variables are selected for a specific location and then plotted according to the specific layout of a skew T-log p diagram (see Results).
 
 ### Vertical Cross-Section
+Vertical cross-sections show a vertical slice of the atmosphere along the specified start (start_lat, start_lon) and end points (end_lat, end_lon). The analysis tool is represented by a plotting fucntion (cross_section), which supports the following variables: vertical_velocity, rh, omega, absolute_vorticity, theta_e and reflectivity. The only input parameters left to define are date, time and save (only necessary if save=True, default is save=False). Based on the defined input parameters, a vertical cross-section is generated with filled mountain area.
 
 ### Maps of Trajectories
+The analysis tool for mapping trajectories uses the output data (trajectories) from the Lagranto program. With the help of a function (lagranto_plotting) the desired variables (water_vapor, updraft and height) along the trajectories can be plotted on the background of terrain height contours (grey). The start_time and end_time of the calculated trajectories need to be indicated as input parameters, as well as Booloean value True if a subset or a svaing of the figure is required. A bunch of trajectories can be selected according to their height level (pbl, 5 or 10). Now all necessary input parameters for the function are available and a horizontal map of trajectories can be made. 
 
 ### Temporal Evolution along Trajectories
+This analysis tool creates a kind of cross-section, but in this case with time on the x-axis and the chosen variable along the trajectories on the y-axis. As mentioned in the section before, also this function (temporal_evolution_trajectories) can seperate the trajectories in bunches of different heights (trajs_bunch=', default = 'all'). Besides the data directory of the trajectory data and the desired save directory, also the frequency of trajectories can be adjusted and the time delta delta needs to be specified. Further, some variables for getting the PBL height need to be set. With all needed variables defined, the function is ready for creating a figure of the temporal evolution along trajectories for the selected variable.
 
 ## Results
 
