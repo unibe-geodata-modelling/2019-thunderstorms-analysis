@@ -4,6 +4,7 @@
 ## Analysis Tools for Investigation of Thunderstorm Initiation Conditions
 
 Author:
+
 Thomas M. Lanz | 14-119-564 | MSc in Climate Sciences | OCCR - University of Bern | thomas.lanz@students.unibe.ch
 
 ## About the Analysis Tools
@@ -14,7 +15,8 @@ Which atmospheric conditions and processes are responsible for thunderstorm init
 
 This coding project is conducted in the framework of the seminar 'Geodata Analysis and Modelling' (FS2019-438745) and is settled within a master thesis project.
 
-## 
+## Methodical Realisation
+For reaching the prediscribed aim of this project, the analysis tools consitis of five different tools for investigating the state of the atmosphere: Horizontal maps, soundings, vertical cross-section, maps of trajectories and temporal evolution of trajectories. Based on these tools, figures are created, which serve as basis for analysis of the atmospheric conditions. 
 
 ## References
 AMS. (2012, April 25). Thunderstorm - AMS glossary. Retrieved April 2, 2019, from http://glossary.ametsoc.org/wiki/Thunderstorm
