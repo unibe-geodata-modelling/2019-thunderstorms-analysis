@@ -7,10 +7,11 @@ Author:
 
 Thomas M. Lanz | 14-119-564 | MSc in Climate Sciences | OCCR - University of Bern | thomas.lanz@students.unibe.ch
 
-## Introduction
+## Introduction and Research Question
 The aim of these tools is the analysis of atmospheric conditions for thunderstorm initiation. Such atmospheric conditions for the evolution of deep convective cells are an unstable stratification of the atmosphere, a substantial amount of ground level moisture and an instability triggering process like convergence or lifting (Wallace & Hobbs, 2006). These conditions represent the basic ingredients for thunderstorm initiation. In general, a thunderstorm is defined by the American Meteorological Society (AMS) as '[...]a local storm, invariably produced by a cumulonimbus cloud and always accompanied by lightning and thunder, usually with strong gusts of wind, heavy rain, and sometimes with hail' (AMS, 2012).
 
 During the summer months in Switzerland, thunderstorms occur frequently and cause a lot of damage (MeteoSwiss, 2018; Nisi et al., 2016; Trefalt et al., 2018). Although, they appear in Switzerland on small spatial scales (compared to e.g. a foehn storm), they have a high damage potential by hail, lightning, wind gusts and high precipitation amounts in short time periods (Doswell et al., 1996; García-Ortega et al., 2007; Trefalt et al., 2018). This reveals that in-depth understanding of these destructive weather events is of great importance and an accurate forecast a desirable target. Despite their frequent occurrence and damage potential, the initiation of thunderstorms is still incompletely understood. The aim of developing the analysis tools is to fill the above mentioned research gap and to answer the following research question: 
+
 Which atmospheric conditions and processes are responsible for thunderstorm initiation in May 2018 in Switzerland?
 
 This coding project is conducted in the framework of the seminar 'Geodata Analysis and Modelling' (FS2019-438745) and is settled within a master thesis project.
@@ -20,10 +21,11 @@ For reaching the prediscribed aim of this project, the analysis tools consists o
 
 The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the five analysis tools, a notebook document was generated. In the following section the workflow of the tools is described.
 
-## Methodical Realisation
+## What the Analyis Tools Do
 For the analysis tools is data used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which input data is also from the WRF model. The WRF data is in netCDF and the Lagranto output data in ASCII file format. 
 
 ### Horizontal Maps
+This analysis tool produces horizontal (2D) maps of different variables. Supported variables for plotting procedure are: updraft, reflectivity, helicity, pw, cape, cin, ctt, temperature_surface, wind_shear, rh, omega, pvo, avo, theta_e, water_vapor, uv_wind, updraft_reflectivity and divergence. Besides the selection of the desired variable_name for plotting procedure, there are more input parameters to be defined: date, start_hour, end_hour, pressure_level=False, subset=False, initiation=False, save=False, gif=False. The first five parameters (variable_name included) need a specific input value (e.g. variable_name="divergence", date="2018-05-30", start_hour=16, end_hour=17, pressure_level=850), where the remaining paramteres need Boolean values (True or False). 
 
 ### Soundings
 
@@ -32,6 +34,10 @@ For the analysis tools is data used from the Weather Research and Forecasting (W
 ### Maps of Trajectories
 
 ### Temporal Evolution along Trajectories
+
+## Results
+
+## Thanks
 
 ## References
 AMS. (2012, April 25). Thunderstorm - AMS glossary. Retrieved April 2, 2019, from http://glossary.ametsoc.org/wiki/Thunderstorm
