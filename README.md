@@ -46,7 +46,7 @@ Doswell, C. A., Brooks, H. E., & Maddox, R. A. (1996). Flash flood fore- casting
 
 García-Ortega, E., Fita, L., Romero, R., López, L., Ramis, C., & Sánchez, J. L. (2007). Numerical simulation and sensitivity study of a severe hailstorm in northeast spain. Atmospheric Research, 83 (2), 225–241. https://doi. org/10.1016/j.atmosres.2005.08.004
 
-MeteoSwiss. (2018, December 21). 2018: Rekordw ̈arme und massive regenar- mut. Retrieved March 23, 2020, from https://www.meteoschweiz. admin.ch/home/suche.subpage.html/de/data/blogs/2018/12/ 2018-waermstes-jahr-seit-messbeginn-.html?query=sommer+2018+ schweiz&topic=0&pageIndex=0&tab=search tab
+MeteoSwiss. (2018, December 21). 2018: Rekordwärme und massive regenarmut. Retrieved March 23, 2020, from https://www.meteoschweiz. admin.ch/home/suche.subpage.html/de/data/blogs/2018/12/ 2018-waermstes-jahr-seit-messbeginn-.html?query=sommer+2018+ schweiz&topic=0&pageIndex=0&tab=search tab
 
 Nisi, L., Martius, O., Hering, A., Kunz, M., & Germann, U. (2016). Spatial and temporal distribution of hailstorms in the alpine region: A long-term, high resolution, radar-based analysis. Quarterly Journal of the Royal Meteorological Society, 142(697), 1590–1604. https://doi.org/10.1002/ qj.2771
 
