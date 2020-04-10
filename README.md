@@ -44,7 +44,7 @@ AMS. (2012, April 25). Thunderstorm - AMS glossary. Retrieved April 2, 2019, fro
 
 Doswell, C. A., Brooks, H. E., & Maddox, R. A. (1996). Flash flood fore- casting: An ingredients-based methodology. Weather and Forecasting, 11(4), 560–581. https://doi.org/10.1175/1520-0434(1996)011⟨0560: FFFAIB⟩2.0.CO;2
 
-García-Ortega, E., Fita, L., Romero, R., L ́opez, L., Ramis, C., & S ́anchez, J. L. (2007). Numerical simulation and sensitivity study of a severe hailstorm in northeast spain. Atmospheric Research, 83 (2), 225–241. https://doi. org/10.1016/j.atmosres.2005.08.004
+García-Ortega, E., Fita, L., Romero, R., López, L., Ramis, C., & Sánchez, J. L. (2007). Numerical simulation and sensitivity study of a severe hailstorm in northeast spain. Atmospheric Research, 83 (2), 225–241. https://doi. org/10.1016/j.atmosres.2005.08.004
 
 MeteoSwiss. (2018, December 21). 2018: Rekordw ̈arme und massive regenar- mut. Retrieved March 23, 2020, from https://www.meteoschweiz. admin.ch/home/suche.subpage.html/de/data/blogs/2018/12/ 2018-waermstes-jahr-seit-messbeginn-.html?query=sommer+2018+ schweiz&topic=0&pageIndex=0&tab=search tab
 
@@ -54,6 +54,6 @@ Powers, J. G., Klemp, J. B., Skamarock, W. C., Davis, C. A., Dudhia, J., Gill, D
 
 Sprenger, M., & Wernli, H. (2015). The LAGRANTO lagrangian analysis tool – version 2.0. Geoscientific Model Development, 8(8), 2569–2586.
 
-Trefalt, S., Martynov, A., Barras, H., Besic, N., Hering, A. M., Lenggenhager, S., Noti, P., R ̈othlisberger, M., Schemm, S., Germann, U., & Martius, O. (2018). A severe hail storm in complex topography in switzerland - observations and processes. Atmospheric Research, 209, 76–94. https: //doi.org/10.1016/j.atmosres.2018.03.007
+Trefalt, S., Martynov, A., Barras, H., Besic, N., Hering, A. M., Lenggenhager, S., Noti, P., Röthlisberger, M., Schemm, S., Germann, U., & Martius, O. (2018). A severe hail storm in complex topography in switzerland - observations and processes. Atmospheric Research, 209, 76–94. https: //doi.org/10.1016/j.atmosres.2018.03.007
 
 Wallace, J. M., & Hobbs, P. V. (2006, March 24). Atmospheric science: An introductory survey [Google-Books-ID: HZ2wNtDOU0oC]. Elsevier.
