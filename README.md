@@ -16,15 +16,22 @@ Which atmospheric conditions and processes are responsible for thunderstorm init
 This coding project is conducted in the framework of the seminar 'Geodata Analysis and Modelling' (FS2019-438745) and is settled within a master thesis project.
 
 ## About the Analysis Tools
-For reaching the prediscribed aim of this project, the analysis tools consists of five different tools for investigating the state of the atmosphere: Horizontal maps, soundings, vertical cross-section, maps of trajectories and temporal evolution of trajectories. Based on these tools, figures are created, which serve as basis for analysis of the atmospheric conditions.
+For reaching the prediscribed aim of this project, the analysis tools consists of five different tools for investigating the state of the atmosphere: Horizontal maps, soundings, vertical cross-section, maps of trajectories and temporal evolution along trajectories. Based on these tools, figures are created, which serve as basis for analysis of the atmospheric conditions.
 
 The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the five analysis tools, a notebook document was generated. In the following section the workflow of the tools is described.
 
 ## Methodical Realisation
-The data for the analysis tools are Weather Research and Forecasting (WRF) model data (v4 ARW) (Powers et al., 2017) and output data of the Lagranto program (Sprenger & Wernli, 2015). The WRF data is in netCDF and the Lagranto output data in ASCII file format. 
+For the analysis tools is data used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which input data is also from the WRF model. The WRF data is in netCDF and the Lagranto output data in ASCII file format. 
 
+### Horizontal Maps
 
+### Soundings
 
+### Vertical Cross-Section
+
+### Maps of Trajectories
+
+### Temporal Evolution along Trajectories
 
 ## References
 AMS. (2012, April 25). Thunderstorm - AMS glossary. Retrieved April 2, 2019, from http://glossary.ametsoc.org/wiki/Thunderstorm
