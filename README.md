@@ -21,7 +21,7 @@ For reaching the prediscribed aim of this project, the analysis tools consists o
 
 The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the five analysis tools, a notebook document was generated, but also a python file is provided. In the following section the workflow of the analysis tools is described.
 
-## What the Analysis Tools Do
+## What the Analysis Tools Do and How to Use
 For the analysis tools is data used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which input data is also from the WRF model. The WRF data is in netCDF and the Lagranto output data in ASCII file format. 
 
 In the following subsections, the codes of the analysis tools are presented and information regarding how to use the codes is provided. For background information of the scientific methods, see the file xy.
