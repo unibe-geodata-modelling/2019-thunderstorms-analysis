@@ -8,29 +8,27 @@ Author:
 Thomas M. Lanz | 14-119-564 | MSc in Climate Sciences | OCCR - University of Bern | thomas.lanz@students.unibe.ch
 
 ## Introduction and Research Question
-The aim of these tools is the analysis of atmospheric conditions for thunderstorm initiation. Such atmospheric conditions for the evolution of deep convective cells are an unstable stratification of the atmosphere, a substantial amount of ground level moisture and an instability triggering process like convergence or lifting (Wallace & Hobbs, 2006). These conditions represent the basic ingredients for thunderstorm initiation. In general, a thunderstorm is defined by the American Meteorological Society (AMS) as '[...]a local storm, invariably produced by a cumulonimbus cloud and always accompanied by lightning and thunder, usually with strong gusts of wind, heavy rain, and sometimes with hail' (AMS, 2012).
+The aim of the analysis tools is the investigation of atmospheric conditions for thunderstorm initiation. Such atmospheric conditions for the evolution of deep convective cells are an unstable stratification of the atmosphere, a substantial amount of ground level moisture and an instability triggering process like convergence or lifting (Wallace & Hobbs, 2006). These conditions represent the basic ingredients for thunderstorm initiation. In general, a thunderstorm is defined by the American Meteorological Society (AMS) as '[...]a local storm, invariably produced by a cumulonimbus cloud and always accompanied by lightning and thunder, usually with strong gusts of wind, heavy rain, and sometimes with hail' (AMS, 2012). Despite their frequent occurrence and damage potential (MeteoSwiss, 2018; Nisi et al., 2016; Trefalt et al., 2018), the initiation of thunderstorms is still incompletely understood. The goal of the developed analysis tools is to fill the above mentioned research gap and to answer the following research question: 
 
-During the summer months in Switzerland, thunderstorms occur frequently and cause a lot of damage (MeteoSwiss, 2018; Nisi et al., 2016; Trefalt et al., 2018). Although, they appear in Switzerland on small spatial scales (compared to e.g. a foehn storm), they have a high damage potential by hail, lightning, wind gusts and high precipitation amounts in short time periods (Doswell et al., 1996; García-Ortega et al., 2007; Trefalt et al., 2018). This reveals that in-depth understanding of these destructive weather events is of great importance and an accurate forecast a desirable target. Despite their frequent occurrence and damage potential, the initiation of thunderstorms is still incompletely understood. The aim of developing the analysis tools is to fill the above mentioned research gap and to answer the following research question: 
-
-Which atmospheric conditions and processes are responsible for thunderstorm initiation in May 2018 in Switzerland?
+How far can the analysis tools unveil the atmospheric conditions and processes responsible for thunderstorm initiation?
 
 This coding project is conducted in the framework of the seminar 'Geodata Analysis and Modelling' (FS2019-438745) and is settled within a master thesis project.
 
 ## About the Analysis Tools
-For reaching the prediscribed aim of this project, the analysis tools consists of five different tools for investigating the state of the atmosphere: Horizontal maps, soundings, vertical cross-section, maps of trajectories and temporal evolution along trajectories. Based on these tools, figures are created, which serve as basis for analysis of the atmospheric conditions.
+For reaching the prediscribed aim of this project, the analysis tools consists of five different tools for investigating the condition and processes of the atmosphere: horizontal maps, soundings, vertical cross-section, maps of trajectories and temporal evolution along trajectories. The figures created with these tools serve as basis for the analysis of the atmosphere and the answering of the research question.
 
-The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the five analysis tools, a notebook document was generated, but also a python file is provided. In the following section the workflow of the analysis tools is described.
+The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the five analysis tools, a notebook document was created (also python files are provided). In the following section the workflow of the analysis tools is described.
 
 ## What the Analysis Tools Do and How to Use
-For the analysis tools is data used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which input data is also from the WRF model. The WRF data is in netCDF and the Lagranto output data in ASCII file format. 
+For the analysis tools data is used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which takes input data from the WRF model. The WRF data is in netCDF and the Lagranto output data in ASCII file format. 
 
-In the following subsections, the codes of the analysis tools are presented and information regarding how to use the codes is provided. For background information of the scientific methods, see the file xy.
+The following subsections provide information regarding the useage of the codes. For background information of the scientific methods, see the file scientific_methods.pdf. Example figures of each analysis tool are presented in the subsequent Results section.
 
 ### Horizontal Maps
-This analysis tool produces horizontal (2D) maps of different variables. Supported variables for plotting procedure are: updraft, reflectivity, helicity, pw, cape, cin, ctt, temperature_surface, wind_shear, rh, omega, pvo, avo, theta_e, water_vapor, uv_wind, updraft_reflectivity and divergence. Besides the selection of the desired variable_name for the plotting function 'horizontal_map', there are more input parameters to be defined: date, start_hour, end_hour, pressure_level=False, subset=False, initiation=False, save=False, gif=False. The first five parameters (variable_name included) need a specific input value (e.g. variable_name="divergence", date="2018-05-30", start_hour=16, end_hour=17, pressure_level=850), where the remaining paramteres need Boolean values (True or False). Further, some more variables need to be defined before using the plotting function (e.g. data_directory, initiation_location or variables depending on the chosen variable_name, see first section of function). Afterwards, the horizontal_map plotting function is ready to usage and generates figures according to the chosen input parameters. For some examples of different types, see Results section.
+This analysis tool produces horizontal (2D) maps of different variables. Supported variables for the plotting function (horizontal_map) are updraft, reflectivity, helicity, pw, cape, cin, ctt, temperature_surface, wind_shear, rh, omega, pvo, avo, theta_e, water_vapor, uv_wind, updraft_reflectivity and divergence. Besides the selection of the desired variable_name for the plotting function, more input parameters need to be defined like date, start_hour, end_hour, pressure_level, subset, initiation, save, gif. The first five parameters (variable_name included) need a specific input value (e.g. variable_name="divergence", date="2018-05-30", start_hour=16, end_hour=17, pressure_level=850), where the remaining parameters need Boolean values (True or False). Further, the definition of some more variables in first section of the code is necessary, before using the plotting function (e.g. data_directory, initiation_location, variables depending on the chosen variable_name, etc.). The horizontal_map function iterates with a 5 minutes time step over a list of files from start_hour until end_hour. If the gif parameter is set True, a gif is created from all the generated figures and the single files are deleted.
 
 ### Soundings
-The sounding is an analysis tool for investigating the vertical structure of the atmosphere for a selected location and date. At this point in space and time, the analysis tool generates a skew T-log p diagram. First, the required variables (e.g. pressure or temperature) need to be computed (by wrf-python function getvar()) and then added back to the WRF dataset. Afterwards, the variables are selected for a specific location and then plotted according to the specific layout of a skew T-log p diagram (see Results).
+The sounding is an analysis tool for investigating the vertical distribution of atmospheric physical properties (e.g. temperature, pressure, wind, etc.) and represents the WRF model data in a similar way like measurement data from an atmospheric sounding (e.g. balloon sounding). For a selected location and time, the analysis tool generates a skew T-log p diagram, based on the variables derived from WRF data. First, the required variables (e.g. pressure or temperature) need to be computed (by wrf-python function getvar()) and then added back to the WRF dataset. Afterwards, the variables are selected for a specific location and then plotted according to the specific layout of a skew T-log p diagram (see Results).
 
 ### Vertical Cross-Section
 Vertical cross-sections show a vertical slice of the atmosphere along the specified start (start_lat, start_lon) and end points (end_lat, end_lon). The analysis tool is represented by a plotting fucntion (cross_section), which supports the following variables: vertical_velocity, rh, omega, absolute_vorticity, theta_e and reflectivity. The only input parameters left to define are date, time and save (only necessary if save=True, default is save=False). Based on the defined input parameters, a vertical cross-section is generated with filled mountain area.
@@ -42,15 +40,22 @@ The analysis tool for mapping trajectories uses the output data (trajectories) f
 This analysis tool creates a kind of cross-section, but in this case with time on the x-axis and the chosen variable along the trajectories on the y-axis. As mentioned in the section before, also this function (temporal_evolution_trajectories) can seperate the trajectories in bunches of different heights (trajs_bunch=', default = 'all'). Besides the data directory of the trajectory data and the desired save directory, also the frequency of trajectories can be adjusted and the time delta delta needs to be specified. Further, some variables for getting the PBL height need to be set. With all needed variables defined, the function is ready for creating a figure of the temporal evolution along trajectories for the selected variable.
 
 ## Results
+This section shows selected results of the respective analysis tools.
+
+### Horizontal Maps
+
+### Soundings
+
+### Vertical Cross-Section
+
+### Maps of Trajectories
+
+### Temporal Evolution along Trajectories
 
 ## Thanks
 
 ## References
 AMS. (2012, April 25). Thunderstorm - AMS glossary. Retrieved April 2, 2019, from http://glossary.ametsoc.org/wiki/Thunderstorm
-
-Doswell, C. A., Brooks, H. E., & Maddox, R. A. (1996). Flash flood fore- casting: An ingredients-based methodology. Weather and Forecasting, 11(4), 560–581. https://doi.org/10.1175/1520-0434(1996)011⟨0560: FFFAIB⟩2.0.CO;2
-
-García-Ortega, E., Fita, L., Romero, R., López, L., Ramis, C., & Sánchez, J. L. (2007). Numerical simulation and sensitivity study of a severe hailstorm in northeast spain. Atmospheric Research, 83 (2), 225–241. https://doi. org/10.1016/j.atmosres.2005.08.004
 
 MeteoSwiss. (2018, December 21). 2018: Rekordwärme und massive regenarmut. Retrieved March 23, 2020, from https://www.meteoschweiz. admin.ch/home/suche.subpage.html/de/data/blogs/2018/12/ 2018-waermstes-jahr-seit-messbeginn-.html?query=sommer+2018+ schweiz&topic=0&pageIndex=0&tab=search tab
 
