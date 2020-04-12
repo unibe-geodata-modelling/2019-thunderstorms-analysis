@@ -93,6 +93,7 @@ Note: At 16:20 UTC no reflectivity values could be detected in the cross-section
 <img src="results/cross_section_omega.png" width="700" height="500">
 
 ### Maps of Trajectories
+<img src="results/.png" width="700" height="500">
 
 ### Temporal Evolution along Trajectories
 
