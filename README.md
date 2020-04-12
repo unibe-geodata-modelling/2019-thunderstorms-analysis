@@ -46,7 +46,11 @@ This section shows selected results of the respective analysis tools.
 In the following subsetions, a variety of figures for different variables and input parameters are presented. This should imply the large amount of possible combinations for plotting with the function of this analysis tool.
 
 #### horizontal_map("updraft", "2018-05-30", 16, 17, save=True)
+<img src="https://github.com/unibe-geodata-modelling/2019-thunderstorms-analysis/blob/master/results/horizontal_map_updraft_2018-05-30_16:20.pdf">
+Figure 7: Europe Zoom: only Transport.
 
+![Alt Text](results/horizontal_map_updraft_2018-05-30_16:20.pdf)
+ width="900" height="500"
 
 ### Soundings
 
