@@ -52,7 +52,7 @@ In the following subsetions, a variety of figures for different variables and in
 <img src="results/horizontal_map_temperature_surface_subset_2018-05-30_16:20.png" width="500" height="400">
 
 #### horizontal_map("wind_shear", "2018-05-30", 16, 17, subset=True, save=True)
-<img src="results/horizontal_map_wind_shear_subset_2018-05-30_16:20.png" width="500" height="400">
+<img src="results/horizontal_map_wind_shear_subset_2018-05-30_16:20.png" width="500" height="500">
 
 #### horizontal_map("rh", "2018-05-30", 16, 17, pressure_level=850, subset=True, initiation=True, save=True)
 <img src="results/horizontal_map_rh_subset_850_2018-05-30_16:20.png" width="500" height="400">
