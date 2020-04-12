@@ -25,7 +25,7 @@ For the analysis tools data is used from the Weather Research and Forecasting (W
 The following subsections provide information regarding the useage of the codes. For background information of the scientific methods, see the file 'scientific_methods.pdf'. Example figures of each analysis tool are presented in the subsequent Results section.
 
 ### Horizontal Maps
-This analysis tool produces horizontal (2D) maps of different variables. Supported variables for the plotting function (horizontal_map) are updraft, reflectivity, helicity, pw, cape, cin, ctt, temperature_surface, wind_shear, rh, omega, pvo, avo, theta_e, water_vapor, uv_wind, updraft_reflectivity and divergence. Besides the selection of the desired variable_name for the function, more input parameters need to be defined like date, start_hour, end_hour, pressure_level, subset, initiation, save and gif. The first five parameters (variable_name included) need a specific input value (e.g. variable_name="divergence", date="2018-05-30", start_hour=16, end_hour=17, pressure_level=850), where the remaining parameters need Boolean values (True or False). Before using the plotting function, the definition of some other variables in first section of the code is necessary (data_dir, save_dir, subset_extent and initiation_location). What the horizontal_map function the does, is an iteration with a 5 minutes time step over a list of files from start_hour until end_hour. If the gif parameter is set True, a gif is created from all the generated figures of the interation process and the single files are deleted in the end.
+This analysis tool produces horizontal (2D) maps of different variables. Supported variables for the plotting function (horizontal_map) are updraft, reflectivity, helicity, pw, cape, cin, ctt, temperature_surface, wind_shear, updraft_reflectivity, rh, omega, pvo, avo, theta_e, water_vapor, uv_wind and divergence. Besides the selection of the desired variable_name for the function, more input parameters need to be defined like date, start_hour, end_hour, pressure_level, subset, initiation, save and gif. The first five parameters (variable_name included) need a specific input value (e.g. variable_name="divergence", date="2018-05-30", start_hour=16, end_hour=17, pressure_level=850), where the remaining parameters need Boolean values (True or False). Before using the plotting function, the definition of some other variables in first section of the code is necessary (data_dir, save_dir, subset_extent and initiation_location). What the horizontal_map function the does, is an iteration with a 5 minutes time step over a list of files from start_hour until end_hour. If the gif parameter is set True, a gif is created from all the generated figures of the interation process.
 
 ### Soundings
 The sounding is an analysis tool for investigating the vertical distribution of atmospheric physical properties (e.g. temperature, pressure, wind, etc.) and represents the WRF model data in a similar way (thermodynamic diagram) like measurement data from an real world atmospheric sounding (e.g. balloon sounding). For a selected location (lat, lon) and time (date), the analysis tool generates a skew T-log p diagram, based on the variables derived from WRF data file (filename). Because the WRF model data lacks some of these specific variables (e.g. pressure, dewpoint temperature or wind speed), these required variables need to be computed (by wrf-python function getvar()) and added back to the WRF dataset. Afterwards, the variables are selected for a specific location and some further variables need to be calculated with MetPy functions. Finally, the code generates a figure according to the specific layout of a skew T-log p diagram (see Results).
@@ -46,11 +46,24 @@ This section shows selected results of the respective analysis tools.
 In the following subsetions, a variety of figures for different variables and input parameters are presented. This should imply the large amount of possible combinations for plotting with the function of this analysis tool.
 
 #### horizontal_map("updraft", "2018-05-30", 16, 17, save=True)
-<img src="https://github.com/unibe-geodata-modelling/2019-thunderstorms-analysis/blob/master/results/horizontal_map_updraft_2018-05-30_16:20.pdf">
-Figure 7: Europe Zoom: only Transport.
+<img src="results/horizontal_map_updraft_2018-05-30_16:20.png" width="500" height="500">
 
-![Alt Text](results/horizontal_map_updraft_2018-05-30_16:20.pdf)
- width="900" height="500"
+#### horizontal_map("temperature_surface", "2018-05-30", 16, 17, subset=True, save=True)
+<img src="results/horizontal_map_temperature_surface_subset_2018-05-30_16:20.png" width="500" height="500">
+
+#### horizontal_map("wind_shear", "2018-05-30", 16, 17, subset=True, save=True)
+<img src="results/horizontal_map_wind_shear_subset_2018-05-30_16:20.png" width="500" height="500">
+
+#### horizontal_map("rh", "2018-05-30", 16, 17, pressure_level=850, subset=True, initiation=True, save=True)
+<img src="results/horizontal_map_rh_subset_850_2018-05-30_16:20.png" width="500" height="500">
+
+#### horizontal_map("divergence", "2018-05-30", 16, 17, pressure_level=850, subset=True, initiation=True, save=True)
+<img src="results/horizontal_map_divergence_subset_850_2018-05-30_16:20.png" width="500" height="500">
+
+#### horizontal_map("updraft_reflectivity", "2018-05-30", 16, 17, subset=True, initiation=True, save=True, gif=True)
+<img src="results/horizontal_map_updraft_reflectivity.gif" width="500" height="500">
+
+
 
 ### Soundings
 
