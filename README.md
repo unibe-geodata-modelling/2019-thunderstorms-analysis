@@ -46,51 +46,51 @@ This section shows selected results of the respective analysis tools.
 In the following subsetions, a variety of figures for different variables and input parameters are presented. This should imply the large amount of possible combinations for plotting with the function of this analysis tool.
 
 #### horizontal_map("updraft", "2018-05-30", 16, 17, save=True)
-<img src="results/horizontal_map_updraft_2018-05-30_16:20.png" width="600" height="500">
+<img src="results/horizontal_map_updraft_2018-05-30_16:20.png" width="500" height="400">
 
 #### horizontal_map("temperature_surface", "2018-05-30", 16, 17, subset=True, save=True)
-<img src="results/horizontal_map_temperature_surface_subset_2018-05-30_16:20.png" width="600" height="500">
+<img src="results/horizontal_map_temperature_surface_subset_2018-05-30_16:20.png" width="500" height="400">
 
 #### horizontal_map("wind_shear", "2018-05-30", 16, 17, subset=True, save=True)
-<img src="results/horizontal_map_wind_shear_subset_2018-05-30_16:20.png" width="600" height="500">
+<img src="results/horizontal_map_wind_shear_subset_2018-05-30_16:20.png" width="500" height="400">
 
 #### horizontal_map("rh", "2018-05-30", 16, 17, pressure_level=850, subset=True, initiation=True, save=True)
-<img src="results/horizontal_map_rh_subset_850_2018-05-30_16:20.png" width="600" height="500">
+<img src="results/horizontal_map_rh_subset_850_2018-05-30_16:20.png" width="500" height="400">
 
 #### horizontal_map("divergence", "2018-05-30", 16, 17, pressure_level=850, subset=True, initiation=True, save=True)
-<img src="results/horizontal_map_divergence_subset_850_2018-05-30_16:20.png" width="600" height="500">
+<img src="results/horizontal_map_divergence_subset_850_2018-05-30_16:20.png" width="500" height="400">
 
 #### horizontal_map("updraft_reflectivity", "2018-05-30", 16, 17, subset=True, initiation=True, save=True, gif=True)
-<img src="results/horizontal_map_updraft_reflectivity.gif" width="600" height="500">
+<img src="results/horizontal_map_updraft_reflectivity.gif" width="500" height="400">
 
 #### horizontal_map("theta_e", "2018-05-30", 15, 17, pressure_level=850, subset=True, initiation=True, save=True, gif=True)
-<img src="results/horizontal_map_theta_e.gif" width="600" height="500">
+<img src="results/horizontal_map_theta_e.gif" width="500" height="400">
 Note: GIF only until time of initiation 16:20 UTC, otherwise GIF file would be too big for the upload. Procedure: Stopped iteration at 16:20, then copied code part out of the dunction (defined save_dir and save_name) and generated GIF separately.
 
 #### horizontal_map("cape", "2018-05-30", 15, 17, subset=True, initiation=True, save=True, gif=True)
-<img src="results/horizontal_map_cape.gif" width="600" height="500">
+<img src="results/horizontal_map_cape.gif" width="500" height="400">
 Note: Same approach for GIF creation as described for Theta-E GIF.
 
 #### horizontal_map("cin", "2018-05-30", 15, 17, subset=True, initiation=True, save=True, gif=True)
-<img src="results/horizontal_map_cin.gif" width="600" height="500">
+<img src="results/horizontal_map_cin.gif" width="500" height="400">
 Note: Same approach for GIF creation as described for Theta-E GIF.
 
 ### Soundings
-<img src="results/sounding.png" width="600" height="600">
+<img src="results/sounding.png" width="500" height="500">
 
 ### Vertical Cross-Section
 #### cross_section('reflectivity', '2018-05-30', '16:25', 47.25, 7.4, 47.25, -1.5, save=True)
-<img src="results/cross_section_reflectivity.png" width="700" height="500">
+<img src="results/cross_section_reflectivity.png" width="600" height="400">
 Note: At 16:20 UTC no reflectivity values could be detected in the cross-section, only at 16:25 UTC.
 
-#### cross_section('rh', '2018-05-30', '16:25', 47.20, 7.4, 47.25, -1.5, save=True)
-<img src="results/cross_section_rh.png" width="700" height="500">
+#### cross_section('rh', '2018-05-30', '16:20', 47.20, 7.4, 47.25, -1.5, save=True)
+<img src="results/cross_section_rh.png" width="600" height="400">
 
 #### cross_section('theta_e', '2018-05-30', '16:20', 47.25, 7.4, 47.25, -1.5, save=True)
-<img src="results/cross_section_theta_e.png" width="700" height="500">
+<img src="results/cross_section_theta_e.png" width="600" height="400">
 
 #### cross_section('omega', '2018-05-30', '16:20', 47.25, 7.4, 47.25, -1.5, save=True)
-<img src="results/cross_section_omega.png" width="700" height="500">
+<img src="results/cross_section_omega.png" width="600" height="400">
 
 ### Maps of Trajectories
 <img src="results/.png" width="700" height="500">
