@@ -20,7 +20,7 @@ For reaching the prediscribed aim of this project, the analysis tools consists o
 The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the five analysis tools, a notebook document was created (also python files are provided in a seperate folder). In the following section the workflow of the analysis tools is described.
 
 ## What the Analysis Tools Do and How to Use
-For the analysis tools data is used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which takes input data from the WRF model. The WRF data is in netCDF file format and the Lagranto output data in ASCII file format.
+For the analysis tools data is used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which takes input data from the WRF model. The WRF data is in netCDF file format and the Lagranto output data in ASCII file format. 
 
 The following subsections provide information regarding the useage of the codes. For background information of the scientific methods and more information regarding the used data, see the 'scientific_methods.pdf'. Example figures of each analysis tool are presented in the subsequent Results section.
 
@@ -138,9 +138,10 @@ Note: number_trajs_plot = 1 and changed extent of subset.
 
 
 ## Conclusion
-
+A selection of results from each analysis tool was presented in the section before. The fact, that many more results could have been shown, reveals the potential of the analysis tools for investigating the conditions and processes of the atmosphere. Of course this potential is dependent on the input data and therein, the available variables. With the data used in this project (see section About the Analysis Tools and 'scientific_background.pdf'), the previously described basic ingredients for thunderstorm intiation (simplified: instability, moisture and trigger) can be analysed in great detail with the generated analysis tools. For each basic ingredient, different tools can be used for the investigation of the respective atmospheric conditions and processes. To conclude and answer the stated research question directly, the analysis tools can unveil the atmospheric conditions and processes for thunderstorm intiation in different ways and resolutions. The tools enable changing the scope from big to small. How far the analysis tool can unveil the basic ingredients is in the end limited by the spatial and temporal resolution of the used model data. But the code of the analysis tools can generate the necessary information for assessment of the conditions and processes in the atmosphere.
 
 ## Thanks
+My thanks go to the supervisors of this project Dr. Andreas Zischg (University of Bern), Dr. Pascal Horton (University of Bern) and Dr. Jorge Ramirez (University of Bern) for their contribution during the semester and their flexibility with the submission date. The same people were responsible for a very interesting seminar, which helped me a lot to get going with my coding. 
 
 ## References
 AMS. (2012, April 25). Thunderstorm - AMS glossary. Retrieved April 2, 2019, from http://glossary.ametsoc.org/wiki/Thunderstorm
