@@ -37,67 +37,108 @@ Vertical cross-sections show a vertical slice of the atmosphere along a line wit
 The analysis tool for mapping trajectories uses the output data (trajectories) from the Lagranto program. With the help of the lagranto_plotting function, the desired variables (water_vapor, updraft or height) along the trajectories can be plotted on the background of terrain height contours (greys). The start_time and end_time of the calculated trajectories need to be indicated as input parameters, as well as Booloean value True, if a subset or a saving of the figure is requested. Furthermore, a bunch of trajectories can be selected according to their height level (pbl, 5 or 10) or otherwise, all available trajectrories will be plotted. For defining the Planteary Boundary Layer (PBL) height, some more variables need to be set prior to executing the function. The number of plotted trajectories in the figure is adjustable by specifying number_trajs_plot. In addition, the trajectory data and save directory need to be specified, as well as the pattern of trajectory starting points (e.g. 'single' or 'area'), the location of thunderstorm initiation and the extent of subset. After the definiton of all necessary input parameters, the function can be executed and a horizontal map of trajectories is generated.
 
 ### Temporal Evolution along Trajectories
-This analysis tool creates a figure of the temporal evolution (time since initiation on the x-axis) of the chosen variable along the trajectories (variable values on the y-axis). As already mentioned in the subsection before, also the function temporal_evolution_trajectories is capable of seperating trajectories in bunches of different heights (trajs_bunch='pbl' or '5' or '10', default = 'all'). Besides the directory of the trajectory data and the desired save directory, delta time (dt) needs to be specified as well. If only a portion of trajectories should be included in the figure, then the number of plotted trajectories (number_trajs_plot) can be varied according to the requests of the user. Further, some variables for getting the PBL height need to be set. For the analysis and comparison between different vertical trajectory bunches, the 10th and 90th percentile and mean for each bunch of trajectories is computed and inidicated with colored lines on the figure (see legend for labeling). With all needed variables and input parameters defined, the function is ready for creating a figure of the temporal evolution along trajectories.
+This analysis tool creates a figure of the temporal evolution (time since initiation on the x-axis) of the chosen variable along the trajectories (variable values on the y-axis). As already mentioned in the subsection before, also the function temporal_evolution_trajectories is capable of seperating trajectories in bunches of different heights (trajs_bunch='pbl' or '5' or '10', default = 'all'). Besides the directory of the trajectory data and the desired save directory, delta time (dt) between the data files needs to be specified as well. If only a portion of trajectories should be included in the figure, then the number of plotted trajectories (number_trajs_plot) can be varied according to the requests of the user. Further, some variables for getting the PBL height need to be set. For the analysis and comparison between different vertical trajectory bunches, the 10th and 90th percentile and mean for each bunch of trajectories is computed and inidicated with colored lines on the figure (see legend for labeling). With all needed variables and input parameters defined, the function is ready for creating a figure of the temporal evolution along trajectories.
 
 ## Results
-This section shows selected results of the respective analysis tools.
+This section shows selected results of the respective analysis tools. A variety of figures for different variables and input parameters are presented. This should imply the large amount of possible combinations of input parameters and variables for plotting with these analysis tool functions.
 
 ### Horizontal Maps
-In the following subsetions, a variety of figures for different variables and input parameters are presented. This should imply the large amount of possible combinations for plotting with the function of this analysis tool.
-
 #### horizontal_map("updraft", "2018-05-30", 16, 17, save=True)
 <img src="results/horizontal_map_updraft_2018-05-30_16:20.png" width="500" height="400">
+
 
 #### horizontal_map("temperature_surface", "2018-05-30", 16, 17, subset=True, save=True)
 <img src="results/horizontal_map_temperature_surface_subset_2018-05-30_16:20.png" width="500" height="400">
 
+
 #### horizontal_map("wind_shear", "2018-05-30", 16, 17, subset=True, save=True)
 <img src="results/horizontal_map_wind_shear_subset_2018-05-30_16:20.png" width="500" height="500">
+
 
 #### horizontal_map("rh", "2018-05-30", 16, 17, pressure_level=850, subset=True, initiation=True, save=True)
 <img src="results/horizontal_map_rh_subset_850_2018-05-30_16:20.png" width="500" height="400">
 
+
 #### horizontal_map("divergence", "2018-05-30", 16, 17, pressure_level=850, subset=True, initiation=True, save=True)
 <img src="results/horizontal_map_divergence_subset_850_2018-05-30_16:20.png" width="500" height="400">
 
+
 #### horizontal_map("updraft_reflectivity", "2018-05-30", 16, 17, subset=True, initiation=True, save=True, gif=True)
 <img src="results/horizontal_map_updraft_reflectivity.gif" width="500" height="400">
+
 
 #### horizontal_map("theta_e", "2018-05-30", 15, 17, pressure_level=850, subset=True, initiation=True, save=True, gif=True)
 <img src="results/horizontal_map_theta_e.gif" width="500" height="400">
 Note: GIF only until time of initiation 16:20 UTC, otherwise GIF file would be too big for the upload. Procedure: Stopped iteration at 16:20, then copied code part out of the dunction (defined save_dir and save_name) and generated GIF separately.
 
+
 #### horizontal_map("cape", "2018-05-30", 15, 17, subset=True, initiation=True, save=True, gif=True)
 <img src="results/horizontal_map_cape.gif" width="500" height="400">
 Note: Same approach for GIF creation as described for Theta-E GIF.
+
 
 #### horizontal_map("cin", "2018-05-30", 15, 17, subset=True, initiation=True, save=True, gif=True)
 <img src="results/horizontal_map_cin.gif" width="500" height="400">
 Note: Same approach for GIF creation as described for Theta-E GIF.
 
+---
+
 ### Soundings
 <img src="results/sounding.png" width="500" height="500">
+
+---
 
 ### Vertical Cross-Section
 #### cross_section('reflectivity', '2018-05-30', '16:25', 47.25, 7.4, 47.25, -1.5, save=True)
 <img src="results/cross_section_reflectivity.png" width="600" height="400">
 Note: At 16:20 UTC no reflectivity values could be detected in the cross-section, only at 16:25 UTC.
 
+
 #### cross_section('rh', '2018-05-30', '16:20', 47.20, 7.4, 47.25, -1.5, save=True)
 <img src="results/cross_section_rh.png" width="600" height="400">
+
 
 #### cross_section('theta_e', '2018-05-30', '16:20', 47.25, 7.4, 47.25, -1.5, save=True)
 <img src="results/cross_section_theta_e.png" width="600" height="400">
 
+
 #### cross_section('omega', '2018-05-30', '16:20', 47.25, 7.4, 47.25, -1.5, save=True)
 <img src="results/cross_section_omega.png" width="600" height="400">
 
+---
+
 ### Maps of Trajectories
-<img src="results/.png" width="700" height="500">
+#### lagranto_plotting("height", "1620", "1200", save=True)
+<img src="results/trajectory_height_1620_1200_area.png" width="600" height="500">
+Note: number_trajs_plot = 2
+
+
+#### lagranto_plotting("water_vapor", "1620", "1200", trajs_bunch_level='pbl', subset=True, save=True)
+<img src="results/trajectory_water_vapor_1620_1200_subset_all_area.png" width="600" height="500">
+Note: number_trajs_plot = 1
+
+
+#### lagranto_plotting("updraft", "1620", "1200", trajs_bunch_level='pbl', subset=True, save=True)
+<img src="results/trajectory_updraft_1620_1200_subset_pbl_area.png" width="600" height="500">
+Note: number_trajs_plot = 1 and changed extent of subset.
+
+---
 
 ### Temporal Evolution along Trajectories
+#### temporal_evolution_trajectories('height', save=True)
+<img src="results/lagranto_evo_height_all_47.25_7.85.png" width="700" height="500">
+
+
+#### temporal_evolution_trajectories('water_vapor', trajs_bunch_level='5', save=True)
+<img src="results/lagranto_evo_water_vapor_5_47.25_7.85.png" width="700" height="500">
+
+
+#### temporal_evolution_trajectories('updraft', trajs_bunch_level='pbl', save=True)
+<img src="results/lagranto_evo_updraft_pbl_47.25_7.85.png" width="700" height="500">
+
 
 ## Conclusion
+
 
 ## Thanks
 
