@@ -43,6 +43,10 @@ This analysis tool creates a figure of the temporal evolution (time since initia
 This section shows selected results of the respective analysis tools.
 
 ### Horizontal Maps
+In the following subsetions, a variety of figures for different variables and input parameters are presented. This should imply the large amount of possible combinations for plotting with the function of this analysis tool.
+
+#### horizontal_map("updraft", "2018-05-30", 16, 17, save=True)
+
 
 ### Soundings
 
@@ -51,6 +55,8 @@ This section shows selected results of the respective analysis tools.
 ### Maps of Trajectories
 
 ### Temporal Evolution along Trajectories
+
+## Conclusion
 
 ## Thanks
 
