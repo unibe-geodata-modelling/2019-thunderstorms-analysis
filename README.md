@@ -22,12 +22,12 @@ The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kerne
 ## What the Analysis Tools Do and How to Use
 For the analysis tools data is used from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015), which takes input data from the WRF model. The WRF data is in netCDF file format and the Lagranto output data in ASCII file format.
 
-The following subsections provide information regarding the useage of the codes. For background information of the scientific methods, see the file 'scientific_methods.pdf'. Example figures of each analysis tool are presented in the subsequent Results section.
+The following subsections provide information regarding the useage of the codes. For background information of the scientific methods and more information regarding the used data, see the 'scientific_methods.pdf'. Example figures of each analysis tool are presented in the subsequent Results section.
 
 ### Horizontal Maps
 This analysis tool produces horizontal (2D) maps of different variables. Supported variables for the plotting function (horizontal_map) are updraft, reflectivity, helicity, pw, cape, cin, ctt, temperature_surface, wind_shear, updraft_reflectivity, rh, omega, pvo, avo, theta_e, water_vapor, uv_wind and divergence. Besides the selection of the desired variable_name for the function, more input parameters need to be defined like date, start_hour, end_hour, pressure_level, subset, initiation, save and gif. The first five parameters (variable_name included) need a specific input value (e.g. variable_name="divergence", date="2018-05-30", start_hour=16, end_hour=17, pressure_level=850), where the remaining parameters need Boolean values (True or False). Before using the plotting function, the definition of some other variables in first section of the code is necessary (data_dir, save_dir, subset_extent and initiation_location). What the horizontal_map function the does, is an iteration with a 5 minutes time step over a list of files from start_hour until end_hour. If the gif parameter is set True, a gif is created from all the generated figures of the interation process.
 
-### Soundings
+### Sounding
 The sounding is an analysis tool for investigating the vertical distribution of atmospheric physical properties (e.g. temperature, pressure, wind, etc.) and represents the WRF model data in a similar way (thermodynamic diagram) like measurement data from an real world atmospheric sounding (e.g. balloon sounding). For a selected location (lat, lon) and time (date), the analysis tool generates a skew T-log p diagram, based on the variables derived from WRF data file (filename). Because the WRF model data lacks some of these specific variables (e.g. pressure, dewpoint temperature or wind speed), these required variables need to be computed (by wrf-python function getvar()) and added back to the WRF dataset. Afterwards, the variables are selected for a specific location and some further variables need to be calculated with MetPy functions. Finally, the code generates a figure according to the specific layout of a skew T-log p diagram (see Results).
 
 ### Vertical Cross-Section
@@ -83,7 +83,7 @@ Note: Same approach for GIF creation as described for Theta-E GIF.
 
 ---
 
-### Soundings
+### Sounding
 <img src="results/sounding.png" width="500" height="500">
 
 ---
